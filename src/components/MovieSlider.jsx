@@ -77,20 +77,18 @@ export default function MovieSlider() {
                             width="16"
                             height="16"
                             viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
+                            fill="#FACC15"
+                            stroke="#FACC15"
+                            stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             class="lucide lucide-star"
                           >
-                            <path d="M12 17.75 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            <path d="M12 17.75 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                           </svg>
                           <span className="text-sm font-medium text-yellow-400">
                             Movies Vote Average
-
                           </span>
-                          
                         </div>
                         <span className="text-neutral-400 text-sm">
                           Movies Release Date
@@ -104,14 +102,13 @@ export default function MovieSlider() {
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
-                          stroke-width="2"
+                          stroke-width="2.5"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          class="lucide lucide-info"
+                          class="lucide lucide-circle-play-icon lucide-circle-play"
                         >
+                          <path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" />
                           <circle cx="12" cy="12" r="10" />
-                          <line x1="12" y1="16" x2="12" y2="12" />
-                          <line x1="12" y1="8" x2="12.01" y2="8" />
                         </svg>
                         View Details
                       </button>
@@ -143,13 +140,12 @@ export default function MovieSlider() {
                     <span className="text-xs text-neutral-400">
                       Movies Vote Average
                     </span>
-                    <span className="text-neutral-500 text-xs"> Movies Release Date </span>
-                    
+                    <span className="text-neutral-500 text-xs">
+                      {" "}
+                      Movies Release Date{" "}
+                    </span>
                   </div>
-                  <span>
-                    
-                  </span>
-                  
+                  <span></span>
                 </div>
               </div>
             </div>
