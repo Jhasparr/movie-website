@@ -14,6 +14,7 @@ function App() {
     <Navbar />
     <main>
       <MoviesContent />
+      
 
     </main>
     </div>

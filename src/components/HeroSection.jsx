@@ -3,7 +3,8 @@ import React from "react";
 export default function HeroSection() {
   return (
     <div className="relative w-full h-screen">
-      <div className="absolute inset-0 bg-center bg-neutral-900 transition-all">
+        {/* Movies Backdrop*/}
+      <div className={"absolute inset-0 bg-cover bg-center bg-neutral-900 transition-all duration-700"}>
         {/*  Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/70 to-neutral-900/20">
           <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 to-transparent"></div>
