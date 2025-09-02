@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import MoviesContent from './components/MoviesContent'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
 
     </main>
     <Footer />
+    <ScrollToTop />
     </div>
       
     </>
