@@ -14,7 +14,7 @@ export default function MoviesContent() {
     
   </div>
   {/*Conditional Rendering*/}
-    <MovieDetails />
+   {/*  <MovieDetails /> */}
 
 
   </>
