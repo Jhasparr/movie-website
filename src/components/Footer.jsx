@@ -163,7 +163,7 @@ export default function Footer() {
             <p className="text-xs">
                 &copy; AllMovies. All Rights Reserved <br className="md:hidden" />
                 <span className="hidden md:inline">.</span>
-                Powered By <a href="#" className="text-purple-400 hover:text-purple-300">IMDB API</a>
+                Powered By <a href="#" className="text-purple-400 hover:text-purple-300">TMDB API</a>
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0 text-xs">
                 <a href="" className="hover:text-purple-400 transition-all">Privacy Policy</a>
