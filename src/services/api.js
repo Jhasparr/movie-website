@@ -1,5 +1,5 @@
 const API_KEY = "fad1ed3773d7d5f295bee9a10b1b78f0";
-const BASE_URL = "https://www.themoviedb.org/";
+const BASE_URL = "https://api.themoviedb.org/3";
 
 export const getTrendingMovies = async () => {
   try {
@@ -17,7 +17,7 @@ export const getTrendingMovies = async () => {
 export const getPopularMovies = async () => {
   try {
     const response = await fetch(
-      `${BASE_URL}/movie/popular/?api_key=${API_KEY}&language=en-US&page=1`
+      `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
     );
     const data = await response.json();
     return data.results;
@@ -30,7 +30,7 @@ export const getPopularMovies = async () => {
 export const getTopRatedMovies = async () => {
   try {
     const response = await fetch(
-      `${BASE_URL}/movie/top_rated/?api_key=${API_KEY}&language=en-US&page=1`
+      `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
     );
     const data = await response.json();
     return data.results;
@@ -82,7 +82,7 @@ export const getMovieDetais = async (movieId) => {
 export const searchMovies = async (query) => {
   try {
     const response = await fetch(
-      `${BASE_URL}/search/movie/?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
+      `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
     );
     const data = await response.json();
     return data.results;
@@ -93,8 +93,8 @@ export const searchMovies = async (query) => {
 };
 
 export const getImageURL = (path, size = "original") => {
-    if (path) {
-        return "https://via.placeholder.com/400x600?text=No+Image+Available";
+    if (!path) 
+        return "https://via.placeholder.com/400x600?text=No+Image+Available"
         return `https://image.tmdb.org/t/p/${size}${path}`;
-    }
+    
 }

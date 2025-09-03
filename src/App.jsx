@@ -6,13 +6,14 @@ import Navbar from './components/Navbar'
 import MoviesContent from './components/MoviesContent'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import { MoviesProvider } from './context/MovieContext'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <div className='min-h-screen text-white'>
+    <MoviesProvider>
+     <div className='min-h-screen text-white'>
     <Navbar />
     <main>
       <MoviesContent />
@@ -22,8 +23,9 @@ function App() {
     <Footer />
     <ScrollToTop />
     </div>
+  
       
-    </>
+    </MoviesProvider>
   )
 }
 
