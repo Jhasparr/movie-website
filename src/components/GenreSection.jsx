@@ -7,6 +7,7 @@ export default function GenreSection() {
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [genreMovies, setGenreMovies] = useState([]);
   const [loadingGenreMovies, setLoadingGenreMovies] = useState([]);
+    const [hoveredMovieId, setHoveredMovieId] = useState(null);
 
   useEffect(() => {
     if (!loading && genres.length > 0) {
@@ -43,6 +44,11 @@ export default function GenreSection() {
     return (Math.round(rating * 10) / 10).toFixed(1);
   };
 
+  const handleMovieClick = (moviesId) => {
+    openMoviesDetails(moviesId);
+    console.log("working")
+  };
+
   return (
     <section className="py-12 bg-neutral-900/50" id="">
       <div className=" container mx-auto px-4">
@@ -73,7 +79,10 @@ export default function GenreSection() {
           {/* Map Method */}
          {genreMovies.map((movie) => {
           return (
-             <div className="group cursor-pointer">
+             <div className="group cursor-pointer " key={movie.id}
+                  onMouseEnter={() => setHoveredMovieId(movie.id)}
+                  onMouseLeave={() => setHoveredMovieId(null)}
+                  onClick={() => handleMovieClick(movie.id)}>
             <div className="relative rounded-lg overflow-hidden bg-neutral-800">
               <div className="aspect-[2/3]">
                 <img

@@ -72,13 +72,12 @@ export default function MovieDetails({ movieId, onClose }) {
         </button>
 
         {loading ? (
-          <div className="flex items-center justify-center h-96">
-            <div className="animate-pulse">
-              <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin">
-                <p className="mt-4 text-neutral-400">Loading Details...</p>
-              </div>
-            </div>
-          </div>
+          <div className="relative w-full h-screen flex items-center justify-center bg-neutral-900">
+        <div className="animate-pulse flex flex-col items-center">
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          <p className="mt-4 text-neutral-400">Loading Movies.........</p>
+        </div>
+      </div>
         ) : error ? (
           <div className="flex items-center justify-center h-96">
             <div className="text-center">
